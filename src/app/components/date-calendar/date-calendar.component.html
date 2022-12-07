@@ -1,0 +1,36 @@
+
+
+
+<div class="calendar-card">
+
+
+    <div class="calendar-card__item">
+
+        <header class="calendar-card__buttons-wrapper">
+
+            <button *ngIf="leftArrow" class="calendar-card__buttons-wrapper_previous"></button>
+
+            <button *ngIf="rightArrow" class="calendar-card__buttons-wrapper_next"></button>
+
+        </header>
+
+        <div class="card-info">
+
+            <div class="card-info__title" data-test = "title">{{ showDateObj }}</div>
+
+            <div class="card-info__week">
+                <div *ngFor=" let weekDay of weekDays" class="card-info__week-day">{{weekDay}}</div>
+            </div>
+
+            <div class="card-info__days">
+
+                <div class="card-info__day"  *ngFor="let dateObj of dateObjs">
+                    {{dateObj.getDate()}}
+                 
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

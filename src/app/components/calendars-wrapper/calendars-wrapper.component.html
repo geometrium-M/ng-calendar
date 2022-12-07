@@ -1,0 +1,18 @@
+<div class="calendar-container__cards">
+
+    <app-date-calendar
+        [showingDate]="calendarFromShowingDate"
+        [leftArrow]="true"
+
+    ></app-date-calendar>
+
+    <app-date-calendar
+        [showingDate]="calendarToShowingDate"
+        [rightArrow]="true"
+    ></app-date-calendar>
+
+</div>
+
+<button (click)="func()">BTN</button>
+
+

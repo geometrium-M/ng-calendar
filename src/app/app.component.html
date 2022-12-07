@@ -1,0 +1,34 @@
+<div class="wrapper">
+
+  <div>
+    <app-radio 
+    [name]="name"
+    [options]="optionsTheme"
+    [value]="selectedTheme" 
+    (newItemEvent) = "updateShowTypeTheme()"
+  ></app-radio>
+  
+  <app-general-config
+    [showTypeDayMonth]="showTypeDayMonth"
+    [showTime]="showTimeType"
+    [showTypeMode]="showTypeMode"
+  
+    (updateShowTime) = "showTimeType = !showTimeType"
+    (updateTypeValue) = "showTypeDayMonth = !showTypeDayMonth"
+    (updateTypeMode) = "showTypeMode = !showTypeMode"
+  
+  ></app-general-config>
+  </div>
+
+
+<app-date-picker
+  [showTypeDayMonth]="showTypeDayMonth"
+  [showTime]="showTimeType"
+  [showTypeMode]="showTypeMode"
+></app-date-picker>
+</div>
+
+
+
+
+
